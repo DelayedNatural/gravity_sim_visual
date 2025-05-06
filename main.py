@@ -1,11 +1,17 @@
-d = int(input("Give the distance of the object from the ground in meters: ")) #initial position of object
-w = int(input("Give the weight of the object: "))
+import time
+
+d = int(input("Δώστε την απόσταση του αντικειμένου από το έδαφος (Maximum 50): ")) #initial position of object
+w = int(input("Δώστε το βάρος: "))
 x = d #position of object
+i = d
 dtemp = d
-while x > 0:
-    while dtemp > x:
-        print(" ")
+while i >= 0:
+    while dtemp >= 0:
+        if x == d:
+            print("☐")
+        print("")
         dtemp -= 1
-    dtemp = d
-    print("☐")
-    x -= 1
+    for i2 in range(d):
+        print("")
+    i -= 1
+    time.sleep(1)
